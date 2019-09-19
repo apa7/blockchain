@@ -60,17 +60,21 @@ genesis.json
 > geth --datadir /home/eth/data init genesis.json
 
 启动
-> geth --datadir /home/eth/data --nodiscover --rpc --rpcapi "web3,eth,personal,miner" --rpccorsdomain "*"  --rpcaddr 0.0.0.0 --rpcport 8545 --networkid 10 console
+> geth --datadir /home/eth/data --nodiscover --rpc --rpcapi "web3,eth,personal,miner" --rpccorsdomain "*"  --rpcaddr 0.0.0.0 --rpcport 8545 --networkid 10 --dev.period 10 console
 
 创建新账户
 > personal.newAccount()
-假设密码输123456
+这里密码123456
+这里创建地址0xbb8110cb7a88235d243e8f1f0e5fe0b3aae86cb8
+
 
 设置挖矿Coinbase账户
-> miner.setCoinbase()
+> miner.setEtherbase("0xbb8110cb7a88235d243e8f1f0e5fe0b3aae86cb8")
 
 开始挖矿
 > miner.start()
+
+等待Generating DAG in progress完成percentage=100 
 
 退出
 > exit
@@ -84,8 +88,7 @@ wq
 
 
 后台启动
-> nohup geth --datadir /home/eth/data --port 30010 --nodiscover --unlock '0' --password /home/eth/password --rpc --rpcaddr 192.168.1.70 --rpcport 18545 --rpcapi personal,db,eth,net,web3,mine --rpccorsdomain "*" --cache=2048 --maxpeers 100  --mine >/home/eth/debug.log &
-
+> nohup geth --datadir /home/eth/data --port 30010 --nodiscover --unlock '0' --password /home/eth/password --rpc --rpcaddr 192.168.1.70 --rpcport 18545 --rpcapi "personal,db,eth,net,web3,mine,miner" --rpccorsdomain "*" --cache=2048 --maxpeers 100  --mine --dev.period 10 >/home/eth/debug.log &
 
 
 
