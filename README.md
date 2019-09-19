@@ -91,5 +91,19 @@ wq
 > nohup geth --datadir /home/eth/data --port 30010 --nodiscover --unlock '0' --password /home/eth/password --rpc --rpcaddr 192.168.1.70 --rpcport 18545 --rpcapi "personal,db,eth,net,web3,mine,miner" --rpccorsdomain "*" --cache=2048 --maxpeers 100  --mine --dev.period 10 >/home/eth/debug.log &
 
 
+### METAMASK轻钱包
+点击链接：https://github.com/MetaMask/metamask-extension/releases
+STEP 2 点击 “Assets” 列表下的 “metamask-chrome-4.4.0.zip” (或你看到的最新版), 下载并解压此压缩包
+用谷歌浏览器 (Chrome) 打开链接：chrome://extensions
+选择 "加载已解压的扩展程序” (Load unpacked extension)，在跳出菜单中选择刚才解压的文件包
+网页将跳转到新的页面，选择 “Get Chrome Extension"
+执行上述步骤后，浏览器右上角将出现一个新图标（MetaMask 狐狸插件图标）, 成功安装 MetaMask 钱包。
+
+### 连接私链网络
+点击MetaMask 右上角网络, 自定义RPC
+填写表单
+RPCURL=http://192.168.1.70:18545
+ChainID=11
+
 
 
