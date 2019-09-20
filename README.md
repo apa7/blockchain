@@ -111,17 +111,25 @@ ChainID=11
 > tar -xzvf omnicore-0.6.0-x86_64-linux-gnu.tar.gz
 > cd omnicore-0.6.0-x86_64-linux-gnu.tar.gz/bin
 > ln -s omnicored /usr/bin/
+
 > ln -s omnicore-cli /usr/bin/
 配置
 > mkdir -p /home/omni/data/
+
 > mv omni.conf /home/omni/
+
 启动脚本
 > mv start.sh /home/omni/
+
 > chmod +x /home/omni/start.sh
+
 > /home/omni/start.sh
+
 omni-client脚本
 > mv cli.sh /home/omni/
+
 > chmod +x /home/omni/cli.sh
+
 > /home/omni/cli.sh help
 
 
