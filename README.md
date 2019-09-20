@@ -108,8 +108,11 @@ ChainID=11
 ## OMNI私链
 下载钱包
 > wget https://github.com/OmniLayer/omnicore/releases/download/v0.6.0/omnicore-0.6.0-x86_64-linux-gnu.tar.gz
+
 > tar -xzvf omnicore-0.6.0-x86_64-linux-gnu.tar.gz
+
 > cd omnicore-0.6.0-x86_64-linux-gnu.tar.gz/bin
+
 > ln -s omnicored /usr/bin/
 
 > ln -s omnicore-cli /usr/bin/
