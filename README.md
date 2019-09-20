@@ -105,5 +105,23 @@ STEP 2 点击 “Assets” 列表下的 “metamask-chrome-4.4.0.zip” (或你�
 RPCURL=http://192.168.1.70:18545
 ChainID=11
 
+## OMNI私链
+下载钱包
+> wget https://github.com/OmniLayer/omnicore/releases/download/v0.6.0/omnicore-0.6.0-x86_64-linux-gnu.tar.gz
+> tar -xzvf omnicore-0.6.0-x86_64-linux-gnu.tar.gz
+> cd omnicore-0.6.0-x86_64-linux-gnu.tar.gz/bin
+> ln -s omnicored /usr/bin/
+> ln -s omnicore-cli /usr/bin/
+配置
+> mkdir -p /home/omni/data/
+> mv omni.conf /home/omni/
+启动脚本
+> mv start.sh /home/omni/
+> chmod +x /home/omni/start.sh
+> /home/omni/start.sh
+omni-client脚本
+> mv cli.sh /home/omni/
+> chmod +x /home/omni/cli.sh
+> /home/omni/cli.sh help
 
 
